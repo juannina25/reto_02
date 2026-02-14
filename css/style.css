@@ -23,9 +23,10 @@ h3{
 body{
     font-family: "Barlow Semi Condensed", sans-serif;
     font-style: normal;
-    align-content: center;
     height: 100vh;
+    align-content: center;
 }
+
 /* Crear grilla */
 section{
 
@@ -38,13 +39,39 @@ section{
     "white gray2 gray2 aside";
     gap: 2em;
     margin: 0 auto;
-    width: 80%;
+    width: 60%;
 
 }
+
+img{
+    border-radius: 50%;
+    width: 2em;
+    height: 2em;
+}
+
+.author{
+    display: flex;
+    padding-bottom: 1em;
+    gap: 1em;
+}
+
+.author .name{
+    margin: 0;
+    padding:0;
+    font-weight: 600;
+
+}
+.author .verticate{
+    margin: 0;
+    padding:0;
+    font-weight: 500;
+    font-size: 13.5px;
+}
+
 article{
     background-color: white;
-    border-radius: 20px;
-    padding: 1.5em;
+    border-radius: 10px;
+    padding: 2em;
     box-shadow: 0 20px 100px -40px var(--Black);
 }
 
@@ -60,16 +87,48 @@ article:nth-child(1){
     h3{
         color: var(--Purple-50);
     }
-
+    p{
+        padding-top: 1em;
+        color: var(--Purple-300);
+        font-weight: 500;
+    }
+    .verticate{
+        color: var(--Purple-300);
+    }
+    .name{
+        color: var(--Purple-50);
+    }
+    
+    img{
+        /* border-style: groove; */
+        border: 2px solid var(--Purple-300);
+    }
 }
 article:nth-child(2){
     background-color: var(--Grey-500);
     grid-area: gray1;
 
     h3{
-        color: var(--Grey-100);
+        color: var(--White);
+    }
+    p{
+        padding-top: 1em;
+        color: var(--Grey-200);
+        font-weight: 500;
+    }
+    .verticate{
+        color: var(--Grey-200);
+    }
+    .name{
+        color: var(--Grey-200);
+    }
+    
+    img{
+        /* border-style: groove; */
+        border: 2px solid var(--Grey-200);
     }
 }
+        
 article:nth-child(3){
     background-color: var(--White);
     grid-area: white;
@@ -77,13 +136,48 @@ article:nth-child(3){
     h3{
         color: var(--Grey-500);
     }
-
+    p{
+        padding-top: 1em;
+        color: var(--Grey-400);
+        font-weight: 500;
+    }
+        .verticate{
+        color: var(--Grey-500);
+    }
+    .name{
+        color: var(--Grey-500);
+    }
+    
+    img{
+        /* border-style: groove; */
+        border: 2px solid var(--White);
+    }
 }
 article:nth-child(4){
     background-color: var(--Black);
     grid-column: 2 span;
     grid-area: gray2;
-    color: var(--Dark-blue);
+
+    h3{
+        color: var(--Grey-100);
+    }
+    p{
+        padding-top: 1em;
+        color: var(--Grey-200);
+        font-weight: 500;
+    }
+        .verticate{
+        color: var(--Grey-200);
+    }
+    .name{
+        color: var(--Grey-200);
+    }
+    
+    img{
+        /* border-style: groove; */
+        border: 2px solid var(--Purple-300);
+    }
+
 
 }
 article:nth-child(5){
@@ -92,16 +186,37 @@ article:nth-child(5){
     /* grid-column: 4;
     grid-row: 1/2 span; */
 
+    h3{
+        color: var(--Grey-500);
+    }
+    p{
+        padding-top: 1em;
+        color: var(--Grey-400);
+        font-weight: 500;
+    }
+        .verticate{
+        color: var(--Grey-500);
+    }
+    .name{
+        color: var(--Grey-500);
+    }
+    
+    img{
+        /* border-style: groove; */
+        border: 2px solid var(--White);
+    }
+
 
 }
 
-@media (width < 1050px){
+@media (width < 1500px){
     section {
          width: 90%; 
     }
 }
-@media (width < 900px) {
+@media (width < 850px) {
     section {
+        width: 80%;
         grid-template-areas: 
         "purple"
         "gray1"
@@ -109,7 +224,14 @@ article:nth-child(5){
         "gray2"
         "aside"
     }
+    article:nth-child(1){
+        background-image: none;
+    }
+    body{
+        padding-top: 3em;
+        padding-bottom: 3em;
+    }
 }
 /* grid-column y  grid-row */
 /* Cuando uno de estos recibe un unico valor loque estas indicando es su posicion */
-/* Pero, si en realidad colocas 2 valores entonces lo que indicas es el espacio que esta tomando */
+
